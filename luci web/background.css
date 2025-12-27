@@ -1,0 +1,106 @@
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
+            border-radius: 10px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        .animated-background {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        .bg-layer {
+            position: absolute;
+            inset: 0;
+        }
+
+        .particles-container {
+            position: absolute;
+            inset: 0;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(35px);
+            animation: floatOrb 20s ease-in-out infinite;
+            opacity: 0.1;
+        }
+
+        .orb:nth-child(1) {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #ff0000, transparent);
+            top: 20%;
+            left: 10%;
+            animation-duration: 25s;
+        }
+
+        .orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, #990000, transparent);
+            top: 60%;
+            right: 10%;
+            animation-duration: 30s;
+            animation-delay: -10s;
+        }
+
+        .orb:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #ff3333, transparent);
+            bottom: 10%;
+            left: 50%;
+            animation-duration: 20s;
+            animation-delay: -5s;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(40px, -40px) scale(1.1); }
+            50% { transform: translate(-25px, 25px) scale(0.9); }
+            75% { transform: translate(25px, 40px) scale(1.05); }
+        }
+
+        .scanlines {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(255, 0, 0, 0.03) 0px,
+                transparent 2px,
+                transparent 4px,
+                rgba(255, 0, 0, 0.03) 6px
+            );
+            animation: scanlineMove 10s linear infinite;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        @keyframes scanlineMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }

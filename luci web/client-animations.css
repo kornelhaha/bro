@@ -1,0 +1,67 @@
+       @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 50px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 50px);
+                background: rgba(10,10,10,0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem 1.2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+                border-top: 1px solid rgba(255,0,0,0.2);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-toggle {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            .toggle-btn {
+                width: 100%;
+            }
+
+            .clients-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .carousel-wrapper {
+                flex-direction: column;
+            }
+
+            .carousel-btn {
+                position: static;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+                gap: 0.4rem;
+            }
+
+            .pagination button {
+                width: 32px;
+                height: 32px;
+                font-size: 0.65rem;
+            }
+        }

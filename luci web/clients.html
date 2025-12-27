@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Favicon.png" sizes="16x16"/>
+    <title>Wee Wee Woo Woo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="client-animations.css">
+    <link rel="stylesheet" href="client-background.css">
+    <link rel="stylesheet" href="client-hero.css">
+    <link rel="stylesheet" href="client-main.css">
+    <link rel="stylesheet" href="client-btn.css">
+    <link rel="stylesheet" href="client-nav.css">
+
+    // lil bro came to check the code //
+</head>
+<body>
+    <div class="animated-background">
+        <canvas class="particles-container" id="particlesCanvas"></canvas>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo">LUCIFIER</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html#home">Home</a></li>
+                <li><a href="home.html#expertise">Expertise</a></li>
+                <li><a href="home.html#skills">Skills</a></li>
+                <li><a href="clients.html" class="active">Clients</a></li>
+            </ul>
+            <a href="home.html#contact" class="nav-cta">Get in touch</a>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <span class="hero-badge">CLIENT SUCCESS</span>
+        <h1 class="page-title">Client Reviews</h1>
+        <p class="page-description">
+            Trusted by communities worldwide. Here's what clients have to say about working with me.
+        </p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">18+</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">5.0</span>
+                <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Satisfaction Rate</span>
+            </div>
+        </div>
+    </div>
+
+    <section>
+
+        <div class="section-toggle">
+            <button class="toggle-btn active" id="reviewsToggle">Client Reviews</button>
+            <button class="toggle-btn" id="clientsToggle">Current Clients</button>
+        </div>
+
+        <div id="reviewsSection">
+            <h2 class="section-title">What Clients Say</h2>
+
+            <div class="reviews-grid" id="reviewsGrid">
+
+            </div>
+
+            <div class="pagination" id="pagination">
+
+            </div>
+        </div>
+
+
+        <div id="currentClientsSection" style="display: none;">
+            <h2 class="section-title">Current Clients</h2>
+
+            <div class="clients-container">
+
+                <div class="clients-column">
+                    <h3 class="column-title">Individual Clients</h3>
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn carousel-prev" id="peoplePrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="client-card" id="peopleCard">
+
+                        </div>
+                        <button class="carousel-btn carousel-next" id="peopleNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="carousel-indicator" id="peopleIndicator"></div>
+                </div>
+
+
+                <div class="clients-column">
+                    <h3 class="column-title">Community Servers</h3>
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn carousel-prev" id="serverPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="client-card" id="serverCard">
+
+                        </div>
+                        <button class="carousel-btn carousel-next" id="serverNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="carousel-indicator" id="serverIndicator"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>❤︎</p>
+    </footer>
+
+    <script src="client-background.js"></script>
+    <script src="client-nav.js"></script>
+    <script src="client-revs.js"></script>
+
+    <script>
+function typeWriterLoop(element, text, typeSpeed = 100, deleteSpeed = 100, pauseTime = 1000) {
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function type() {
+        if (isDeleting) {
+            element.textContent = text.substring(0, charIndex);
+            charIndex--;
+            
+            if (charIndex < 0) {
+                isDeleting = false;
+                charIndex = 0;
+                setTimeout(type, 500);
+                return;
+            }
+            setTimeout(type, deleteSpeed);
+        } else {
+            element.textContent = text.substring(0, charIndex);
+            charIndex++;
+            
+            if (charIndex > text.length) {
+                isDeleting = true;
+                charIndex = text.length;
+                setTimeout(type, pauseTime);
+                return;
+            }
+            setTimeout(type, typeSpeed);
+        }
+    }
+    
+    type();
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const tabTitle = 'Wee Wee Woo Woo';
+    let tabCharIndex = 0;
+    let tabIsDeleting = false;
+    
+    function typeTabTitle() {
+        if (tabIsDeleting) {
+            document.title = tabTitle.substring(0, tabCharIndex) || '.';
+            tabCharIndex--;
+            
+            if (tabCharIndex < 0) {
+                tabIsDeleting = false;
+                tabCharIndex = 0;
+                setTimeout(typeTabTitle, 500);
+                return;
+            }
+            setTimeout(typeTabTitle, 100);
+        } else {
+            document.title = tabTitle.substring(0, tabCharIndex) || '.';
+            tabCharIndex++;
+            
+            if (tabCharIndex > tabTitle.length) {
+                tabIsDeleting = true;
+                tabCharIndex = tabTitle.length;
+                setTimeout(typeTabTitle, 1000);
+                return;
+            }
+            setTimeout(typeTabTitle, 150);
+        }
+    }
+    
+    typeTabTitle();
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Favicon.png" sizes="16x16"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="animations.css">
+
+</head>
+<body>
+    <div class="animated-background">
+        <div class="bg-layer">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+        </div>
+        <canvas class="particles-container" id="particlesCanvas"></canvas>
+        <div class="scanlines"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">LUCIFIER</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="clients.html">Clients</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get in touch</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-label">AVAILABLE FOR WORK</span>
+            <h1 class="hero-title">
+                <span class="hero-title-gradient">Hi, I'm Lucifier.</span>
+            </h1>
+            <p class="hero-description">
+                Experienced Manager with a proven background across multiple areas, including Community Management,
+                Staff Management, Event Organization, and Social Media Oversight. Additionally skilled in PC Checking,
+                with a focus on maintaining professionalism and operational efficiency.
+            </p>
+            <div class="hero-buttons">
+                <a href="#expertise" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="clients.html" class="btn btn-secondary">
+                    <span>See Reviews</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <div class="section-header">
+            <span class="section-badge">EXPERTISE</span>
+            <h2 class="section-title">My Expertise</h2>
+            <p class="section-description">
+                Specialized skill set across community management, security operations, and digital management.
+            </p>
+        </div>
+
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>PC Checker</h3>
+                <p>Conducting thorough PC Checks to confirm compliance with anti-cheat standards. Experienced in identifying unauthorized modifications, monitoring system performance, and ensuring players meet fair play requirements.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Community Management</h3>
+                <p>Organizing and running engaging events that boost community participation and strengthen member connections. Managing fair and transparent giveaways to reward members and encourage server growth.</p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <h3>Discord Manager</h3>
+                <p>Creating custom Discord bots for server management, moderation, and community engagement. Comprehensive server setup and configuration, including permission systems and role hierarchies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <span class="section-badge">CORE SKILLS</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-description">
+                A comprehensive toolkit of technical and management capabilities.
+            </p>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="skill-name">Community Management</div>
+                <div class="skill-level">Expert</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <div class="skill-name">Bot Development</div>
+                <div class="skill-level">Advanced</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="skill-name">Staff Management</div>
+                <div class="skill-level">Expert</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                <div class="skill-name">PC Diagnostics</div>
+                <div class="skill-level">Intermediate</div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-calendar-alt"></i></div>
+                <div class="skill-name">Event Planning</div>
+                <div class="skill-level">Advanced</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-badge">GET IN TOUCH</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-description">
+                Open to discussing new projects, opportunities, or collaborations.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Add My Discord</h3>
+                <p>Want to collaborate the easiest way possible? Well, add me on Discord to get started!</p>
+                <a href="nothingness" target="_blank" class="contact-button">
+                    <i class="fab fa-discord"></i>
+                    <span>Send Friend Request</span>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <h3>Follow Me on Twitter</h3>
+                <p>Stay updated with new projects, announcements, and professional updates by following me on Twitter.</p>
+                <a href="https://x.com/theredguiid?s=21" target="_blank" class="contact-button">
+                    <i class="fab fa-twitter"></i>
+                    <span>Follow on Twitter</span>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <h3>Request Work Order</h3>
+                <p>Need work done? Send a Work Request & I'll respond if it's sufficient.</p>
+                <a href="nothingness" target="_blank" class="contact-button">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Send Work Order</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>❤︎</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="nav.js"></script>
+    <script type="module" src="animations.js"></script>
+    <script type="module" src="particles.js"></script>
+
+
+    <script>
+function typeWriterLoop(element, text, typeSpeed = 100, deleteSpeed = 100, pauseTime = 1000) {
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function type() {
+        if (isDeleting) {
+            element.textContent = text.substring(0, charIndex);
+            charIndex--;
+            
+            if (charIndex < 0) {
+                isDeleting = false;
+                charIndex = 0;
+                setTimeout(type, 500);
+                return;
+            }
+            setTimeout(type, deleteSpeed);
+        } else {
+            element.textContent = text.substring(0, charIndex);
+            charIndex++;
+            
+            if (charIndex > text.length) {
+                isDeleting = true;
+                charIndex = text.length;
+                setTimeout(type, pauseTime);
+                return;
+            }
+            setTimeout(type, typeSpeed);
+        }
+    }
+    
+    type();
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const tabTitle = 'Wee Wee Woo Woo';
+    let tabCharIndex = 0;
+    let tabIsDeleting = false;
+    
+    function typeTabTitle() {
+        if (tabIsDeleting) {
+            document.title = tabTitle.substring(0, tabCharIndex) || '.';
+            tabCharIndex--;
+            
+            if (tabCharIndex < 0) {
+                tabIsDeleting = false;
+                tabCharIndex = 0;
+                setTimeout(typeTabTitle, 500);
+                return;
+            }
+            setTimeout(typeTabTitle, 100);
+        } else {
+            document.title = tabTitle.substring(0, tabCharIndex) || '.';
+            tabCharIndex++;
+            
+            if (tabCharIndex > tabTitle.length) {
+                tabIsDeleting = true;
+                tabCharIndex = tabTitle.length;
+                setTimeout(typeTabTitle, 1000);
+                return;
+            }
+            setTimeout(typeTabTitle, 150);
+        }
+    }
+    
+    typeTabTitle();
+});
+    </script>
+</body>
+</html>

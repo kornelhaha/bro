@@ -1,0 +1,291 @@
+        section {
+            padding: 3rem 1.2rem;
+            max-width: 950px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.25rem 0.7rem;
+            background: rgba(255,0,0,0.15);
+            border: 1px solid rgba(255,0,0,0.3);
+            border-radius: 18px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: #ff3333;
+            margin-bottom: 0.7rem;
+            transition: all 0.3s ease;
+        }
+
+        .section-badge:hover {
+            background: rgba(255,0,0,0.25);
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 0.7rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-description {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            max-width: 480px;
+        }
+
+           .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .expertise-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1.6rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            inset: -100%;
+            background: radial-gradient(circle at center, rgba(255,0,0,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: all 0.6s ease;
+            transform: scale(0);
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255,0,0,0.4);
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 15px 40px rgba(255,0,0,0.3);
+        }
+
+        .expertise-card:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .expertise-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,0,0,0.15);
+            border: 2px solid rgba(255,0,0,0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .expertise-card:hover .expertise-icon {
+            background: rgba(255,0,0,0.25);
+            border-color: rgba(255,0,0,0.6);
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .expertise-icon i {
+            font-size: 1.3rem;
+            color: #ff0000;
+            transition: all 0.3s ease;
+        }
+
+        .expertise-card:hover .expertise-icon i {
+            color: #ff3333;
+        }
+
+        .expertise-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .expertise-card:hover h3 {
+            color: #ff3333;
+        }
+
+        .expertise-card p {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+
+        .expertise-card:hover p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1.2rem 0.7rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-8px) scale(1.05);
+            border-color: rgba(255,0,0,0.4);
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 12px 30px rgba(255,0,0,0.3);
+        }
+
+        .skill-icon {
+            font-size: 1.7rem;
+            margin-bottom: 0.7rem;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: inline-block;
+        }
+
+        .skill-item:hover .skill-icon {
+            transform: scale(1.3) rotateY(360deg);
+        }
+
+        .skill-name {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.35rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover .skill-name {
+            color: #ff0000;
+        }
+
+        .skill-level {
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1.6rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255,0,0,0.4);
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 12px 30px rgba(255,0,0,0.3);
+        }
+
+        .contact-card h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover h3 {
+            color: #ff3333;
+        }
+
+        .contact-card p {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.2rem;
+            background: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+            font-size: 0.7rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .contact-button:hover::before {
+            width: 250px;
+            height: 250px;
+        }
+
+        .contact-button span, .contact-button i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-button:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,0,0,0.5);
+        }
+
+        .contact-button:hover i {
+            transform: scale(1.2);
+        }
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 1.2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+            position: relative;
+            z-index: 10;
+        }

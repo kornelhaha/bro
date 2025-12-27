@@ -1,0 +1,78 @@
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1.2rem 2.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 0.25rem 0.7rem;
+            background: rgba(255,0,0,0.15);
+            border: 1px solid rgba(255,0,0,0.3);
+            border-radius: 18px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: #ff3333;
+            margin-bottom: 1.2rem;
+            animation: fadeInDown 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .hero-label:hover {
+            background: rgba(255,0,0,0.25);
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title-gradient {
+            background: linear-gradient(135deg, #fff 0%, #ff0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .hero-description {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            max-width: 520px;
+            margin: 0 auto 1.6rem;
+            line-height: 1.6;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(35px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 1.4s ease-out;
+        }

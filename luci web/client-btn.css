@@ -1,0 +1,23 @@
+        .toggle-btn {
+            padding: 0.65rem 1.6rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,0,0,0.3);
+            color: #fff;
+        }
+
+        .toggle-btn.active {
+            background: #ff0000;
+            border-color: #ff0000;
+            color: #fff;
+        }
